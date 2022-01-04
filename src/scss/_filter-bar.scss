@@ -1,0 +1,64 @@
+.filter-bar {
+    padding: 20px 40px;
+    background:$white;
+    transform:translateY(-50%);
+    border-radius:5px;
+    box-shadow: 1px 1px 20px rgba(#0D7182, .5);
+    position:relative;
+    width:100%;
+    align-items:center
+}
+
+.clear {
+    color:$green;
+    cursor:pointer;
+    font-weight:bold;
+    &:hover {
+        text-decoration:underline;
+    }
+}
+.filter-keywords-wrap {
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+.filter-keyword {
+    background:$light-green;
+    padding:3px 30px 4px 8px;
+    border-radius:4px;
+    color:$green;
+    font-weight:bold;
+    position:relative;
+    height:30px;
+    cursor:pointer;
+    &:after {
+        content:"";
+        background-image: url("../images/icon-remove.svg");
+        background-size:12px;
+        background-repeat: no-repeat;
+        background-position:center center;
+        margin-right: 3px;
+        background-color: $green;
+        color:$white;
+        right: -7px;
+        height:30px;
+        width:30px;
+        position: absolute;
+        top: 0;
+        height:100%;
+        border-radius: 0 4px 4px 0;
+        transition:all .2s
+    }
+    &:not(:last-child) {
+        margin-right:20px
+    }
+
+    &:hover {
+        &:after {
+            background-color:$black;
+            transition:all .2s
+        }
+    }
+}
+

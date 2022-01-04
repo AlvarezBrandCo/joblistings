@@ -1,0 +1,128 @@
+@media (min-width: 818px) {
+    .jl-info {
+        height:80px;
+        display:flex;
+        flex: 2 0 0;
+        flex-direction:column;
+        justify-content: space-between;
+        text-align:left;
+    }
+}
+
+.jl-wrap {
+    margin-bottom:25px;
+    background:white;
+    border-radius:5px;
+    padding:25px 40px;
+    border-left:solid $green 5px;
+    box-shadow: 1px 1px 20px lighten(#0D7182, 55%);
+    display:flex;
+    align-items:center;
+}
+
+.jl-logo {
+    width:88px;
+    margin-right:25px;
+}
+.jl-company-name {
+    color:$green;
+    font-weight:bold;
+    font-size:14px;
+    margin-right:10px;
+}
+
+.jl-title {
+    font-weight:bold;
+    font-size:18px
+}
+
+.jl-details {
+    font-size:15px;
+    color:$light-gray;
+}
+
+.jl-keywords-wrap {
+    flex: 3 0 0;
+    text-align:left;
+    display:flex;
+    justify-content: end;
+    flex-wrap:wrap;
+    gap: 10px 0;
+}
+.jl-keyword {
+    padding:8px 15px;
+    background:$light-green;
+    color:$green;
+    font-weight:bold;
+    display:inline;
+    border-radius:4px;
+    font-size:13px;
+    &:not(:first-child) {
+        margin-left:10px
+    }
+    &:hover {
+        cursor:pointer
+    }
+}
+
+.jl-small-keyword {
+    padding:2px 8px;
+    color:$white;
+    font-weight:bold;
+    font-size:11px;
+    display:inline;
+    border-radius:15px;
+    line-height:14px;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+        margin-right:10px
+    }
+}
+ .jl-small-keyword.new {
+     background:$green;
+ }
+ .jl-small-keyword.featured {
+     background:$black;
+ }
+
+
+ @media (max-width:817px) {
+  .jl-wrap {
+      flex-direction:column;
+      align-items: flex-start;
+      position:relative;
+      width:90%;
+      max-width: 500px;
+      margin:auto auto 50px;
+  }
+  .jl-info {
+      height:80px;
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+      text-align:left;
+  }
+  .jl-logo {
+      position:absolute;
+      left:0;
+      top:0;
+      width:50px;
+      transform:translate(30px, -50%)
+  }
+  
+  .jl-keywords-wrap {
+      justify-content: start;
+      border-top: 1px solid $aqua;
+      padding-top:15px;
+      margin-top:30px;
+  }
+  .jl-keyword {
+      &:not(:first-child) {
+          margin-left:0;
+      }
+      &:not(:last-child) {
+          margin-right:10px;
+      }
+  }
+ }
